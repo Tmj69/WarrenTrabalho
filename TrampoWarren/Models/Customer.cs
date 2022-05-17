@@ -1,9 +1,9 @@
 ﻿namespace TrampoWarren.Models
 {
-    public class Afiliados
+    public class Customer
     {
-        public Afiliados() { }
-        public Afiliados(int Id, string nome, string email, string emailConfirmation, string cpf, string cellPhone, DateTime birthdate, Boolean emailSms, Boolean whatsapp, string country, string city, string postalcode, string address, string number)
+        public Customer() { }
+        public Customer(int Id, string nome, string email, string emailConfirmation, string cpf, string cellPhone, DateTime birthdate, Boolean emailSms, Boolean whatsapp, string country, string city, string postalcode, string address, string number)
         {
             this.Id = Id;
             this.Nome = nome;
@@ -20,10 +20,7 @@
             this.Address = address;
             this.Number = number;
         }
-        public int Id
-        {
-            get; set;
-        }
+        public int Id { get; set; }
         public string Nome { get; set; }
         public string Email { get; set; }
         public string EmailConfirmation { get; set; }

@@ -1,11 +1,14 @@
 using TrampoWarren.Data;
+using FluentValidation.AspNetCore;
+using TrampoWarren.Validation; 
+
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
-        .AddFluentValidation(config => config.RegisterValidatorsFromAssemblyContaining<Validations>());
+builder.Services.AddControllers()
+        .AddFluentValidation(config => config.RegisterValidatorsFromAssemblyContaining<Validation>());
             builder.Services.AddMemoryCache();
             builder.Services.AddSingleton<IRepository, Repository>();
 
